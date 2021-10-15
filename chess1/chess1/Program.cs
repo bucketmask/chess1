@@ -6,9 +6,10 @@ namespace chess1
     {
         static void Main(string[] args)
         {
-            string FEN_StartPostition = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
+            string FEN_StartPostition = "4Qr2/b1p1np1p/pPP5/P5KP/1kNRPPPp/1qpr2RN/n3pP1p/4BB1b";
             chessBoard Board = new chessBoard(FEN_StartPostition);
             Board.Draw();
+            Console.ReadKey();
         }
     }
 
@@ -23,7 +24,6 @@ namespace chess1
             int placeValue = 0;
             for (int line = 0; line < FENsplit.Length; line++)
             {
-                //Console.WriteLine("line num:" + line.ToString() + "\nFEN:" + FENsplit[line]);
                 for (int characterPlace = 0; characterPlace < FENsplit[line].Length; characterPlace++)
                 {
                     int number;
